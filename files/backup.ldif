@@ -36,15 +36,17 @@ dn: cn=admin,ou=groups,dc=test,dc=com
 cn: admin
 gidnumber: 500
 memberuid: johndoe
+memberuid: janedoe
 objectclass: posixGroup
 objectclass: top
 
 # Entry 5: cn=openstack,ou=groups,dc=test,dc=com
 dn: cn=openstack,ou=groups,dc=test,dc=com
 cn: openstack
-gidnumber: 501
-memberuid: johndoe
-objectclass: posixGroup
+member: cn=johndoe,ou=users,dc=test,dc=com
+member: cn=janedoe,ou=users,dc=test,dc=com
+businessCategory: cloud
+objectclass: groupOfNames
 objectclass: top
 
 # Entry 6: ou=users,dc=test,dc=com
